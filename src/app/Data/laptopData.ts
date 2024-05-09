@@ -3,7 +3,7 @@ import { ILaptop } from "../Models/ILaptop";
 export class LaptopData {
   static laptops: ILaptop[] = [
     {
-      imageUrl: "/assets/images/laptop1.avif",
+      imageUrl: "assets/images/laptop1.avif",
       name: "ASUS ROG SCAR 16 Gaming",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i9-14900HX",
@@ -16,7 +16,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop2.avif",
+      imageUrl: "assets/images/laptop2.avif",
       name: "Chimera NP5350E Gaming Laptop",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen™ 7 8845HS",
@@ -29,7 +29,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop3.avif",
+      imageUrl: "assets/images/laptop3.avif",
       name: "Chimera NP5350C Gaming Laptop",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen™ 7 8845HS",
@@ -42,7 +42,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop4.webp",
+      imageUrl: "assets/images/laptop4.webp",
       name: "Chimera NP5350D Gaming Laptop",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen™ 7 8845HS",
@@ -55,7 +55,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop5.webp",
+      imageUrl: "assets/images/laptop5.webp",
       name: "Chimera NP5350E Gaming Laptop",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen™ 7 8845HS",
@@ -68,7 +68,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop6.avif",
+      imageUrl: "assets/images/laptop6.avif",
       name: "Chimera NP5350D Gaming Laptop",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i9-14900HX",
@@ -81,7 +81,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop7.webp",
+      imageUrl: "assets/images/laptop7.webp",
       name: "ASUS TUF A15 FA507XI-EH94",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen™ 9 7940HS",
@@ -94,7 +94,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop8.webp",
+      imageUrl: "assets/images/laptop8.webp",
       name: "ASUS ROG Strix G513RC-ES73",
       windows: "Windows 11 Home",
       cpu: "AMD Ryzen 7 6800HS",
@@ -107,7 +107,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop9.avif",
+      imageUrl: "assets/images/laptop9.avif",
       name: "MSI Vector 16 HX A14VGG-254US",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i9-14900HX",
@@ -120,7 +120,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop10.avif",
+      imageUrl: "assets/images/laptop10.avif",
       name: "ASUS ROG SCAR 18 G834JZR-XS96",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i9-14900HX",
@@ -133,7 +133,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop11.avif",
+      imageUrl: "assets/images/laptop11.avif",
       name: "MSI Vector 16 HX A14VFG-246US",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i9-14900HX",
@@ -146,7 +146,7 @@ export class LaptopData {
       category: "laptop",
       storage: '1TB M.2 NVMe SSD'
     }, {
-      imageUrl: "/assets/images/laptop12.avif",
+      imageUrl: "assets/images/laptop12.avif",
       name: "MSI Stealth 15 A13VF-038US",
       windows: "Windows 11 Home",
       cpu: "Intel® Core™ i5-13420H",
