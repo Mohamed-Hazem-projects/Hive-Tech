@@ -1,0 +1,37 @@
+<i class="fa-solid fa-cart-shopping" (click)="clickCart()"></i>
+<div class="overlay" (click)="closeCart()" *ngIf="cartOpen"></div>
+<span class="items-in-cart" *ngIf="products.length > 0" (click)="clickCart()">{{
+  products.length
+}}</span>
+<div class="cart" *ngIf="cartOpen">
+  <h4>
+    Cart
+    <button (click)="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+  </h4>
+  <div class="products">
+    <p class="empty" *ngIf="products.length === 0">Your cart is empty</p>
+    <div class="product" *ngFor="let product of products">
+      <img [src]="product.image" alt="product" />
+      <div class="DescAndRemove">
+        <p>{{ product.name }}</p>
+        <span class="numberOfItems"
+          >Number Of Items: <span>{{ product.noOfItems }}</span></span
+        >
+        <div class="price">
+          <button type="button" (click)="removeProduct(product)">Remove</button>
+          <span>${{ product.price }}</span>
+        </div>
+      </div>
+      <span class="br"></span>
+    </div>
+  </div>
+  <div class="pricing">
+    <div class="price">
+      <span>SubTotal</span> <span>${{ subTotal.toFixed(2) }}</span>
+    </div>
+    <button>View Cart</button>
+  </div>
+  <div class="payment">
+    <img src="../../../assets/images/payments.PNG" alt="Payment methods" />
+  </div>
+</div>

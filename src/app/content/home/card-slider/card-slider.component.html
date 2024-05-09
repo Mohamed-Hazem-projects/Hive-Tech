@@ -1,0 +1,29 @@
+<div class="heading">
+  <h2>Best Selling Gaming PCs</h2>
+  <h3>Prebuilt & Custom</h3>
+  <div class="buttons">
+    <button
+      type="button"
+      class="before"
+      (click)="before()"
+      [disabled]="beforeDisabled"
+    >
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <button
+      type="button"
+      class="next"
+      (click)="next()"
+      [disabled]="nextDisabled"
+    >
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+</div>
+<div class="card-slider">
+  <div #childSlider [ngStyle]="{ transform: getValue() }">
+    <ng-container *ngFor="let card of cards">
+      <big-card [theProduct]="card"></big-card>
+    </ng-container>
+  </div>
+</div>

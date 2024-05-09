@@ -1,0 +1,198 @@
+$primary-color: #6ce3e3;
+$secondary-color: #333333;
+a:visited {
+  color: $secondary-color;
+}
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px -2px 6px 3px #00000036;
+  height: 65px;
+  color: $secondary-color;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  @media (max-width: 1040px) {
+    justify-content: space-between;
+  }
+}
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $secondary-color;
+  cursor: pointer;
+}
+.routes {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  z-index: 11;
+  height: 100%;
+}
+header div img {
+  padding-left: 9px;
+  width: 62px;
+  @media (max-width: 530px) {
+    width: 52px;
+  }
+}
+header div h1 {
+  font-family: "Platypi", sans-serif;
+  word-spacing: -5px;
+  margin: 0;
+  font-weight: 800;
+  @media (max-width: 530px) {
+    font-size: 27px;
+  }
+}
+header ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+  height: 100%;
+}
+header ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  height: 100%;
+  position: relative;
+  transition: background-color 0.2s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    height: 2px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: $secondary-color;
+    transition: 0.15s;
+  }
+  &:hover {
+    background-color: hsl(0, 0%, 97%);
+  }
+  &:hover::after {
+    display: block;
+  }
+  i {
+    font-size: 22px;
+    padding: 20px;
+    cursor: pointer;
+  }
+}
+header ul a {
+  color: $secondary-color;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.phone-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+  margin-right: 20px;
+  @media (max-width: 530px) {
+    gap: 5px;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .bars {
+    font-size: 43px;
+    @media (max-width: 530px) {
+      font-size: 23px;
+    }
+  }
+  i {
+    padding: 20px 10px;
+    cursor: pointer;
+  }
+}
+
+.bars ul {
+  position: absolute;
+  height: auto;
+  width: 300px;
+  flex-direction: column;
+  top: 65px;
+  right: 0;
+  z-index: 11;
+  padding: 0;
+  background-color: white;
+  gap: 1px;
+  animation: appearFromLeft 0.3s ease-out;
+}
+.bars ul li {
+  width: 100%;
+  font-size: 32px;
+  background-color: white;
+  border-bottom: 1px solid $secondary-color;
+  position: relative;
+  animation: textAnim 0.4s ease-out;
+}
+.bars ul li:first-of-type {
+  border-top: 2px solid #d8dcdf;
+}
+.bars ul li:first-of-type a {
+  padding: 25px 30px;
+}
+.bars ul li a {
+  padding: 25px 50px;
+  user-select: none;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3333338c;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  z-index: 10;
+  animation: appear 0.3s;
+}
+
+@keyframes textAnim {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes appearFromLeft {
+  0% {
+    width: 0;
+    letter-spacing: -15px;
+    word-spacing: -30px;
+  }
+  50% {
+    letter-spacing: -10px;
+    word-spacing: -25px;
+  }
+  100% {
+    width: 300px;
+    letter-spacing: 0;
+    word-spacing: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+header ul a.route-active {
+  color: hsl(180, 64%, 56%);
+}

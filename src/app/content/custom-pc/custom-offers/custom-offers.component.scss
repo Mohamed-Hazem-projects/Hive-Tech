@@ -1,0 +1,115 @@
+$secondary-color: #333333;
+.main {
+  color: $secondary-color;
+  width: 1360px;
+  @media (max-width: 1400px) {
+    width: 1233px;
+  }
+  @media (max-width: 1250px) {
+    width: 690px;
+  }
+  @media (max-width: 710px) {
+    width: 100%;
+  }
+  margin: auto;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 20px 20px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-size: 27px;
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      button {
+        display: none;
+        @media (max-width: 1250px) {
+          display: flex;
+        }
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s, background-color 0.3s;
+      }
+      button:hover {
+        color: white;
+        background-color: $secondary-color;
+      }
+      button:disabled:hover {
+        color: #eee;
+        background-color: #eeeeee4f;
+        cursor: default;
+      }
+    }
+  }
+  .containerz {
+    overflow: hidden;
+    .content {
+      transition: transform 0.3s;
+      display: flex;
+      gap: 10px;
+      div {
+        display: flex;
+        background-color: #f2f6fa;
+        width: 435px;
+        @media (max-width: 1250px) {
+          width: 650px;
+          flex-shrink: 0;
+        }
+        @media (max-width: 710px) {
+          width: 100%;
+        }
+        border-radius: 10px;
+        padding: 15px;
+        max-height: 200px;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40%;
+          @media (max-width: 440px) {
+            width: 30%;
+          }
+          img {
+            width: 71%;
+            @media (max-width: 440px) {
+              width: 150%;
+            }
+          }
+        }
+        .writing {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          align-items: flex-start;
+          h4 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            @media (max-width: 440px) {
+              font-size: 18px;
+            }
+          }
+          p {
+            margin-top: 5px;
+            font-size: 16px;
+          }
+          span {
+            font-size: 12px;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

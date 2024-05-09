@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="image">
+    <img [src]="product?.imageUrl" alt="gear image" />
+    <div class="overlay" *ngIf="product?.stock === 0">Out of Stock</div>
+  </div>
+  <div class="writing">
+    <h2>{{ product?.name }}</h2>
+    <div class="prices">
+      <h2>${{ (product!.oldprice - product!.discount).toFixed(2) }}</h2>
+      <span>${{ product?.oldprice }}</span>
+    </div>
+    <h3 *ngIf="product!.stock > 0; else notinstock">In Stock</h3>
+    <ng-template #notinstock>
+      <h3 class="not-in-stock">Not In Stock</h3>
+    </ng-template>
+    <div class="lorem">
+      <h4>Product Details</h4>
+      <ul>
+        <li>CPU : {{ product?.cpu }}</li>
+        <li>GPU : {{ product?.gpu }}</li>
+        <li>Ram : {{ product?.ram }}</li>
+        <li>Storage : {{ product?.storage }}</li>
+      </ul>
+    </div>
+    <div class="purchase">
+      QTY:
+      <select
+        name="number"
+        id="number"
+        [disabled]="product?.stock === 0"
+        #numberofitems
+      >
+        <option *ngFor="let num of stocknumbers" [value]="num">
+          {{ num }}
+        </option>
+      </select>
+    </div>
+    <button
+      (click)="sendToCart()"
+      [disabled]="product?.stock === 0"
+      [ngClass]="{ disablebutton: product?.stock === 0 }"
+    >
+      Add To Cart
+    </button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div
+  class="product-card"
+  [ngClass]="{ 'out-of-stock': theProduct.stock === 0 }"
+>
+  <a routerLink="/products/product/{{ theProduct.ID }}"
+    ><img [src]="theProduct.imageUrl" alt="Product Image"
+  /></a>
+  <div class="product-name">
+    <a routerLink="/products/product/{{ theProduct.ID }}">
+      <p>{{ theProduct.productDescription }}</p>
+    </a>
+  </div>
+  <div class="ratings">
+    <i
+      *ngFor="let item of [].constructor(math.floor(theProduct.rating))"
+      class="fa-solid fa-star"
+    ></i>
+    <i *ngIf="theProduct.rating % 1 !== 0" class="fa-solid fa-star-half"></i>
+  </div>
+  <div class="payments">
+    <div class="pricing">
+      <p class="price">
+        ${{ (theProduct.oldprice - theProduct.discount).toLocaleString() }}
+        <span *ngIf="theProduct.discount > 0" class="old-price"
+          >${{ theProduct.oldprice }}</span
+        >
+      </p>
+      <span *ngIf="theProduct.discount > 0" class="discount"
+        >SAVE ${{ theProduct.discount }}</span
+      >
+    </div>
+    <p class="month-payment">
+      Starting at
+      <span>
+        ${{
+          ((theProduct.oldprice - theProduct.discount) / 18)
+            .toFixed(2)
+            .toLocaleString()
+        }}/mo
+      </span>
+    </p>
+    <div class="payment-buttons">
+      <div class="stock-buttons">
+        <button type="button" (click)="subtractProduct()">&#8722;</button>
+        <span>{{ buyNumber }}</span>
+        <button type="button" (click)="addProduct()">&#43;</button>
+      </div>
+      <button type="button" (click)="addToCart()">Buy Now</button>
+    </div>
+  </div>
+</div>

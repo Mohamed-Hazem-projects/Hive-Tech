@@ -1,0 +1,29 @@
+<div class="main">
+  <div class="image">
+    <img [src]="product?.imageUrl" alt="gear image" />
+  </div>
+  <div class="writing">
+    <h2>{{ product?.description }}</h2>
+    <div class="prices">
+      <h2>${{ product!.oldprice - product!.discount }}</h2>
+      <span>${{ product?.oldprice }}</span>
+    </div>
+    <h3>In Stock</h3>
+    <div class="lorem">
+      <h4>Product highlight</h4>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Dolores harum cumque inventore delectus, laboriosam,</li>
+        <li>tempore qui similique placeat numquam at excepturi itaque.</li>
+        <li>Enim officiis nihil ipsum qui tempore recusandae rerum.</li>
+      </ul>
+    </div>
+    <div class="purchase">
+      QTY:
+      <select name="number" id="number">
+        <option value="1">1</option>
+      </select>
+    </div>
+    <button (click)="sendToCart()">Add To Cart</button>
+  </div>
+</div>

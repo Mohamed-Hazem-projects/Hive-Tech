@@ -1,0 +1,45 @@
+<div class="all">
+  <div class="intro">
+    <div class="intro-writing">
+      <h2>Gear Store</h2>
+      <p>
+        Complete your gaming setup and start your gaming lifestyle with our
+        gaming accessories, including apparel, PC components, peripherals, and
+        gaming chairs.
+      </p>
+    </div>
+    <img src="../../../assets/images/gear0.webp" alt="Gear Store" />
+  </div>
+  <div class="Top">
+    <h2>Top Deals</h2>
+    <div class="cards">
+      <ng-container *ngFor="let product of topProducts">
+        <gear-card [Product]="product"></gear-card>
+      </ng-container>
+    </div>
+  </div>
+  <div class="Best">
+    <h3 class="heading">Best Sellers</h3>
+    <div class="cards2">
+      <ng-container *ngFor="let product of bestProducts">
+        <smol-card [Product]="product"></smol-card
+      ></ng-container>
+    </div>
+  </div>
+  <div class="under">
+    <h3 class="heading">Under $50</h3>
+    <div class="cards2">
+      <ng-container *ngFor="let product of underProducts">
+        <smol-card [Product]="product"></smol-card
+      ></ng-container>
+    </div>
+  </div>
+  <div class="rec">
+    <h3 class="heading">Recommended For You</h3>
+    <div class="cards2">
+      <ng-container *ngFor="let product of recProducts">
+        <smol-card [Product]="product"></smol-card
+      ></ng-container>
+    </div>
+  </div>
+</div>

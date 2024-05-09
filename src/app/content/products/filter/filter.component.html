@@ -1,0 +1,74 @@
+<div class="filters">
+  <button
+    routerLink="/products/category/All"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 0 }"
+    (click)="filter(0)"
+  >
+    All
+  </button>
+  <button
+    routerLink="/products/category/CPUs"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 1 }"
+    (click)="filter(1)"
+  >
+    CPU
+  </button>
+  <button
+    routerLink="/products/category/GPUs"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 2 }"
+    (click)="filter(2)"
+  >
+    GPU
+  </button>
+  <button
+    routerLink="/products/category/CPU-coolers"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 3 }"
+    (click)="filter(3)"
+  >
+    Coolers
+  </button>
+  <button
+    routerLink="/products/category/motherboards"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 4 }"
+    (click)="filter(4)"
+  >
+    MotherBoard
+  </button>
+  <button
+    routerLink="/products/category/ram"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 5 }"
+    (click)="filter(5)"
+  >
+    Ram
+  </button>
+  <button
+    routerLink="/products/category/storage"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 6 }"
+    (click)="filter(6)"
+  >
+    Storage
+  </button>
+  <button
+    routerLink="/products/category/powersupplys"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 7 }"
+    (click)="filter(7)"
+  >
+    Power Supply
+  </button>
+  <button
+    routerLink="/products/category/cases"
+    type="button"
+    [ngClass]="{ clicked: clickedButton === 8 }"
+    (click)="filter(8)"
+  >
+    Cases
+  </button>
+</div>

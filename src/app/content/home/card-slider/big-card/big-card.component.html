@@ -1,0 +1,48 @@
+<div class="product-card">
+  <span class="img"
+    ><img [src]="theProduct.imageUrl" alt="Product Image"
+  /></span>
+  <div class="product-name">
+    <a routerLink="/custom-pc/pc/{{ theProduct.ID }}">
+      <p>{{ theProduct.name }}</p>
+    </a>
+  </div>
+  <div class="stats">
+    <p>{{ theProduct.windows }}</p>
+    <p>{{ theProduct.cpu }}</p>
+    <p>{{ theProduct.gpu }}</p>
+    <p>{{ theProduct.storage }}</p>
+    <p>{{ theProduct.ram }}</p>
+  </div>
+  <div class="payments">
+    <div class="pricing">
+      <p class="price">
+        ${{ (theProduct.oldprice - theProduct.discount).toLocaleString() }}
+        <span *ngIf="theProduct.discount > 0" class="old-price"
+          >${{ theProduct.oldprice }}</span
+        >
+      </p>
+      <span *ngIf="theProduct.discount > 0" class="discount"
+        >SAVE ${{ theProduct.discount }}</span
+      >
+    </div>
+    <p class="month-payment">
+      Starting at
+      <span>
+        ${{
+          ((theProduct.oldprice - theProduct.discount) / 18)
+            .toFixed(2)
+            .toLocaleString()
+        }}/mo
+      </span>
+    </p>
+    <div class="payment-buttons">
+      <div class="stock-buttons">
+        <button type="button" (click)="subtractProduct()">&#8722;</button>
+        <span>{{ buyNumber }}</span>
+        <button type="button" (click)="addProduct()">&#43;</button>
+      </div>
+      <button type="button" (click)="addToCart()">Buy Now</button>
+    </div>
+  </div>
+</div>

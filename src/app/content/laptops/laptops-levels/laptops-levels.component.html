@@ -1,0 +1,69 @@
+<div class="main">
+  <h2>Customize Your Own Laptop</h2>
+  <div class="cards" levelsSlide>
+    <div class="slide" [ngStyle]="{ transform: getValue() }">
+      <div class="card">
+        <div class="header">Starter Gaming</div>
+        <div class="image">
+          <img [src]="laptops[6].imageUrl" alt="Custom PC" />
+        </div>
+        <div class="writing">
+          <h3>{{ laptops[2].name }}</h3>
+          <p>OS: {{ laptops[2].windows }}</p>
+          <p>CPU: {{ laptops[2].cpu }}</p>
+          <p>GPU: {{ laptops[2].gpu }}</p>
+        </div>
+        <h2>${{ laptops[2].oldprice }}</h2>
+        <button (click)="toCart(0)">Add To Cart</button>
+      </div>
+      <div class="card">
+        <div class="header">Pro Gaming</div>
+        <div class="image">
+          <img [src]="laptops[3].imageUrl" alt="Custom PC" />
+        </div>
+        <div class="writing">
+          <h3>{{ laptops[3].name }}</h3>
+          <p>OS: {{ laptops[3].windows }}</p>
+          <p>CPU: {{ laptops[3].cpu }}</p>
+          <p>GPU: {{ laptops[3].gpu }}</p>
+        </div>
+        <h2>${{ laptops[3].oldprice }}</h2>
+        <button (click)="toCart(1)">Add To Cart</button>
+      </div>
+      <div class="card">
+        <div class="header">Elite Gaming</div>
+        <div class="image">
+          <img [src]="laptops[4].imageUrl" alt="Custom PC" />
+        </div>
+        <div class="writing">
+          <h3>{{ laptops[4].name }}</h3>
+          <p>OS: {{ laptops[4].windows }}</p>
+          <p>CPU: {{ laptops[4].cpu }}</p>
+          <p>GPU: {{ laptops[4].gpu }}</p>
+        </div>
+        <h2>${{ laptops[4].oldprice }}</h2>
+        <button (click)="toCart(2)">Add To Cart</button>
+      </div>
+      <div class="card">
+        <div class="header">Extreme Gaming</div>
+        <div class="image">
+          <img [src]="laptops[5].imageUrl" alt="Custom PC" />
+        </div>
+        <div class="writing">
+          <h3>{{ laptops[5].name }}</h3>
+          <p>OS: {{ laptops[5].windows }}</p>
+          <p>CPU: {{ laptops[5].cpu }}</p>
+          <p>GPU: {{ laptops[5].gpu }}</p>
+        </div>
+        <h2>${{ laptops[5].oldprice }}</h2>
+        <button (click)="toCart(3)">Add To Cart</button>
+      </div>
+    </div>
+    <button class="before" (click)="before()" [disabled]="index === 0">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <button class="after" (click)="after()" [disabled]="hideAfterButton">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+</div>

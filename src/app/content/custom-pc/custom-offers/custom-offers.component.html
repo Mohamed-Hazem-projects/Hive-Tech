@@ -1,0 +1,45 @@
+<div class="main">
+  <div class="header">
+    <h3>New Offers</h3>
+    <div class="buttons">
+      <button (click)="before()" *ngIf="index > 0">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button (click)="after()" [disabled]="index >= 203">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="containerz" offerSlide>
+    <div class="content" [ngStyle]="{ transform: getValue() }">
+      <div>
+        <div><img src="assets/images/offers1.avif" alt="Offer 3" /></div>
+        <div class="writing">
+          <h4>Free RGB Branded Memory Upgrade</h4>
+          <p>to 32GB DDR5-6000 TEAMGROUP T-Force Delta RGB</p>
+          <span>For ALL Custom Desktops Excluding EZB</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="assets/images/offers2.avif" alt="Offer 1" />
+        </div>
+        <div class="writing">
+          <h4>Up to $50 Instant Rebate</h4>
+          <p>Intel® Core™ 14th Gen Processors</p>
+          <span>For Intel Custom PCs</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="assets/images/offers3.avif" alt="Offer 2" />
+        </div>
+        <div class="writing">
+          <h4>Up to $50 Instant Rebate</h4>
+          <p>AMD Ryzen™ 7000 Series Processors</p>
+          <span>For AMD Custom PCs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

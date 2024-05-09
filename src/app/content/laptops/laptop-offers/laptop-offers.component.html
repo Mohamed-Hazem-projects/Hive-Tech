@@ -1,0 +1,45 @@
+<div class="main">
+  <div class="header">
+    <h3>New Offers</h3>
+    <div class="buttons">
+      <button (click)="before()" *ngIf="index > 0">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button (click)="after()" [disabled]="index >= 203">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="containerz" offerSlidelaptop>
+    <div class="content" [ngStyle]="{ transform: getValue() }">
+      <div>
+        <div><img src="assets/images/offers4.avif" alt="Offer 1" /></div>
+        <div class="writing">
+          <h4>$5 Only</h4>
+          <p>Hive Tech IEM Mouse Pad ($19 Value)</p>
+          <span>For All INTEL Laptops</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="assets/images/offers5.avif" alt="Offer 2" />
+        </div>
+        <div class="writing">
+          <h4>$50 ONLY</h4>
+          <p>HYTE Eclipse HG10 Headset ($99 Value)</p>
+          <span>If your laptop cost more than $1000</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="assets/images/offers6.avif" alt="Offer 3" />
+        </div>
+        <div class="writing">
+          <h4>FREE Ares M2 Optical Mouse</h4>
+          <p>Limited Time Offer</p>
+          <span>If your laptop cost more than $1500</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

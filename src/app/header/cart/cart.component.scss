@@ -1,0 +1,217 @@
+i {
+  padding: 20px 10px;
+  cursor: pointer;
+  font-size: 22px;
+  @media (max-width: 1040px) {
+    font-size: 30px;
+  }
+  @media (max-width: 530px) {
+    font-size: 20px;
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3333338c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: appear 0.3s ease-out;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  width: 450px;
+  background-color: white;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  animation: fromleft 0.3s ease-out;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+  h4 {
+    padding: 0;
+    background-color: #ececec;
+    border-bottom: 1px solid hsl(0, 2%, 80%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 21px;
+    height: 40px;
+    button {
+      position: absolute;
+      background-color: #ececec;
+      right: 0;
+      top: 0;
+      border: none;
+      height: 39px;
+      padding: 0;
+      padding: 4px 17px;
+      cursor: pointer;
+      i {
+        padding: 0;
+        font-size: 30px;
+      }
+    }
+  }
+}
+@keyframes fromleft {
+  from {
+    right: -450px;
+  }
+  to {
+    right: 0;
+  }
+}
+.products {
+  height: 65%;
+  width: 100%;
+  overflow-y: auto;
+}
+.pricing {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 120px;
+  position: relative;
+  padding: 15px 30px;
+  font-size: 28px;
+  font-weight: bold;
+  border-top: 1px solid hsl(0 0% 80%);
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    border: none;
+    color: white;
+    background-color: red;
+    width: 100%;
+    margin-top: 13px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
+.payment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #ececec;
+  padding: 5px;
+  img {
+    width: 88%;
+  }
+}
+
+.items-in-cart {
+  cursor: pointer;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  top: 10px;
+  right: 15px;
+  padding: 0px 3px;
+  @media (max-width: 1040px) {
+    top: 7px;
+    right: 100px;
+  }
+  @media (max-width: 530px) {
+    top: 10px;
+    right: 52px;
+  }
+}
+
+.product {
+  position: relative;
+  display: flex;
+  height: 40%;
+  align-items: center;
+  img {
+    padding-right: 20px;
+    max-width: 160px;
+    padding-left: 20px;
+    height: fit-content;
+  }
+  .DescAndRemove {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px;
+    padding-right: 25px;
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .numberOfItems {
+      font-size: 16px;
+      margin: 14px 0px;
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    align-items: flex-end;
+    font-weight: bold;
+    button {
+      color: white;
+      background-color: hsl(0, 100%, 75%);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      padding: 2px 0px;
+      transition: background-color 0.3s;
+      padding: 5px 10px;
+      font-size: 20px;
+      margin-top: 23px;
+    }
+    button:hover {
+      background-color: red;
+    }
+    span {
+      font-size: 30px;
+    }
+  }
+}
+.br {
+  width: 90%;
+  height: 2px;
+  background-color: #cccccc;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+.empty {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}

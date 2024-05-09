@@ -1,0 +1,46 @@
+<header>
+  <div class="logo" routerLink="">
+    <img src="../../favicon.png" alt="" />
+    <h1>Hive Tech</h1>
+  </div>
+  <div class="routes" *ngIf="!smallScreen">
+    <ng-template [ngTemplateOutlet]="routes"></ng-template>
+    <ul>
+      <li>
+        <a routerLink="/sign-in" routerLinkActive="route-active">Sign In</a>
+      </li>
+      <li>
+        <a routerLink="/Register" routerLinkActive="route-active">Register</a>
+      </li>
+      <li>
+        <cart></cart>
+      </li>
+    </ul>
+  </div>
+  <div class="phone-icons" *ngIf="smallScreen">
+    <a routerLink="sign-in"><i class="fa-solid fa-user"></i></a>
+    <div class="cart" (click)="closeBars()"><cart></cart></div>
+    <div class="bars">
+      <i class="fa-solid fa-bars" (click)="clickBars()"></i>
+      <div class="overlay" (click)="clickOverlay()" *ngIf="barsOpen"></div>
+      <ng-template [ngTemplateOutlet]="routes" *ngIf="barsOpen"></ng-template>
+    </div>
+  </div>
+</header>
+
+<ng-template #routes
+  ><ul>
+    <li>
+      <a routerLink="/custom-pc" routerLinkActive="route-active">Custom PCs</a>
+    </li>
+    <li>
+      <a routerLink="/products" routerLinkActive="route-active">PC parts</a>
+    </li>
+    <li>
+      <a routerLink="/laptops" routerLinkActive="route-active">Laptops</a>
+    </li>
+    <li>
+      <a routerLink="/gear-store" routerLinkActive="route-active">Gear Store</a>
+    </li>
+  </ul></ng-template
+>

@@ -1,0 +1,136 @@
+<div class="main">
+  <div class="buttons">
+    <button (click)="toggleButtons1()" [ngClass]="{ active: customButton }">
+      Custom PCs
+    </button>
+    <button (click)="toggleButtons2()" [ngClass]="{ active: preBuiltButton }">
+      Prebuilt PCs
+    </button>
+  </div>
+  <div class="big">
+    <div class="custom" *ngIf="customButton">
+      <div class="first">
+        <h3>{{ prebuilt1.name }}</h3>
+        <div>
+          <div>
+            <h4>OS</h4>
+            <p>{{ prebuilt1.windows }}</p>
+          </div>
+          <div>
+            <h4>CPU</h4>
+            <p>{{ prebuilt1.cpu }}</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>GPU</h4>
+            <p>{{ prebuilt1.gpu }}</p>
+          </div>
+          <div>
+            <h4>MEMORY</h4>
+            <p>{{ prebuilt1.ram }}</p>
+          </div>
+        </div>
+        <div class="pricing">
+          <h4>{{ (prebuilt1.oldprice - prebuilt1.discount).toFixed(2) }}</h4>
+          <span>${{ prebuilt1.oldprice }}</span>
+        </div>
+        <span>Save ${{ prebuilt1.discount }} on this deal!</span>
+        <Button (click)="toCart1()">Add To Cart</Button>
+        <img [src]="prebuilt1.imageUrl" alt="prebuilt" />
+      </div>
+      <div class="second">
+        <h3>{{ prebuilt2.name }}</h3>
+        <div>
+          <div>
+            <h4>OS</h4>
+            <p>{{ prebuilt2.windows }}</p>
+          </div>
+          <div>
+            <h4>CPU</h4>
+            <p>{{ prebuilt2.cpu }}</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>GPU</h4>
+            <p>{{ prebuilt2.gpu }}</p>
+          </div>
+          <div>
+            <h4>MEMORY</h4>
+            <p>{{ prebuilt2.ram }}</p>
+          </div>
+        </div>
+        <div class="pricing">
+          <h4>{{ (prebuilt2.oldprice - prebuilt2.discount).toFixed(2) }}</h4>
+          <span>${{ prebuilt2.oldprice }}</span>
+        </div>
+        <span>Save ${{ prebuilt2.discount }} on this deal!</span>
+        <Button (click)="toCart2()">Add To Cart</Button>
+        <img [src]="prebuilt2.imageUrl" alt="prebuilt" />
+      </div>
+    </div>
+    <div class="prebuilt" *ngIf="preBuiltButton">
+      <div class="first">
+        <h3>{{ prebuilt3.name }}</h3>
+        <div>
+          <div>
+            <h4>OS</h4>
+            <p>{{ prebuilt3.windows }}</p>
+          </div>
+          <div>
+            <h4>CPU</h4>
+            <p>{{ prebuilt3.cpu }}</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>GPU</h4>
+            <p>{{ prebuilt3.gpu }}</p>
+          </div>
+          <div>
+            <h4>MEMORY</h4>
+            <p>{{ prebuilt3.ram }}</p>
+          </div>
+        </div>
+        <div class="pricing">
+          <h4>{{ (prebuilt3.oldprice - prebuilt3.discount).toFixed(2) }}</h4>
+          <span>${{ prebuilt3.oldprice }}</span>
+        </div>
+        <span>Save ${{ prebuilt3.discount }} on this deal!</span>
+        <Button (click)="toCart3()">Add To Cart</Button>
+        <img [src]="prebuilt3.imageUrl" alt="prebuilt" />
+      </div>
+      <div class="second">
+        <h3>{{ prebuilt4.name }}</h3>
+        <div>
+          <div>
+            <h4>OS</h4>
+            <p>{{ prebuilt4.windows }}</p>
+          </div>
+          <div>
+            <h4>CPU</h4>
+            <p>{{ prebuilt4.cpu }}</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>GPU</h4>
+            <p>{{ prebuilt4.gpu }}</p>
+          </div>
+          <div>
+            <h4>MEMORY</h4>
+            <p>{{ prebuilt4.ram }}</p>
+          </div>
+        </div>
+        <div class="pricing">
+          <h4>{{ (prebuilt4.oldprice - prebuilt4.discount).toFixed(2) }}</h4>
+          <span>${{ prebuilt4.oldprice }}</span>
+        </div>
+        <span>Save ${{ prebuilt4.discount }} on this deal!</span>
+        <Button (click)="toCart4()">Add To Cart</Button>
+        <img [src]="prebuilt4.imageUrl" alt="prebuilt" />
+      </div>
+    </div>
+  </div>
+</div>

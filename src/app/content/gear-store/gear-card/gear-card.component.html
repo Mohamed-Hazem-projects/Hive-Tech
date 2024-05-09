@@ -1,0 +1,17 @@
+<div class="card">
+  <img src="{{ Product.imageUrl }}" alt="gear" />
+  <div class="writing">
+    <a routerLink="/gear-store/product/{{ Product.ID }}"
+      ><p>{{ Product.description }}</p></a
+    >
+    <div class="pricing">
+      <h3>${{ Product.oldprice - Product.discount }}</h3>
+      <span *ngIf="Product.discount" class="before-price"
+        >${{ Product.oldprice }}</span
+      >
+      <span *ngIf="Product.discount" class="discount"
+        >SAVE ${{ Product.discount }}</span
+      >
+    </div>
+  </div>
+</div>

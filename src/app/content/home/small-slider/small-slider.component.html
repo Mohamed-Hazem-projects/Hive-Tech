@@ -1,0 +1,54 @@
+<div class="slider">
+  <button
+    type="button"
+    class="before"
+    (click)="left()"
+    [hidden]="slidesAppear[0]"
+  >
+    <i class="fa-solid fa-angle-left"></i>
+  </button>
+  <!-- add/remove your slides here and update the indexes -->
+  <div class="slides">
+    <div
+      class="windows"
+      [ngClass]="{ disappear: slidesDisappear[0], appear: slidesAppear[0] }"
+    >
+      <a
+        target="_blank"
+        href="https://www.microsoft.com/software-download/windows11"
+        ><img src="../../../../assets/images/windowsAd.avif" alt="Windows"
+      /></a>
+    </div>
+    <p [ngClass]="{ disappear: slidesDisappear[1], appear: slidesAppear[1] }">
+      Get up to <span>25%</span> discounts and save <span>100's</span> of
+      dollars
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[2], appear: slidesAppear[2] }">
+      <span>Fastest Delivery</span> among all competitors in your area
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[3], appear: slidesAppear[3] }">
+      Get <span>50$ OFF</span> your first purchase
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[4], appear: slidesAppear[4] }">
+      Get <span>30% OFF</span> on GPUs and CPUs with code <span>HAZEM</span>
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[5], appear: slidesAppear[5] }">
+      Get <span>150$ OFF</span> if your order is above 2000$
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[6], appear: slidesAppear[6] }">
+      Get <span>10% OFF</span> custom desktops with code <span>HAZEM</span>
+    </p>
+    <p [ngClass]="{ disappear: slidesDisappear[7], appear: slidesAppear[7] }">
+      Get <span>2X</span> reward points and <span>2X</span> Points Redemption
+    </p>
+  </div>
+
+  <button
+    type="button"
+    class="next"
+    (click)="right()"
+    [hidden]="slidesAppear[slidesAppear.length - 1]"
+  >
+    <i class="fa-solid fa-angle-right"></i>
+  </button>
+</div>

@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="header">
+    <div class="headerz">
+      <h2>Best PC Parts Money Can Buy.</h2>
+      <p>Find fastest PC parts for your budget.</p>
+      <p>Biggest selection of Computer Components in Egypt.</p>
+      <p>
+        best offers and discounts, and enjoy interest-free installment systems
+        and free shipping.
+      </p>
+    </div>
+    <img
+      src="../../../assets/images/products_header.avif"
+      alt="Picture of PC"
+    />
+  </div>
+  <div class="product-filter">
+    <app-search (searchEvent)="searchFilter($event)"></app-search>
+    <app-filter (filterproducts)="filtering($event)"></app-filter>
+    <div class="cards">
+      <card
+        class="card"
+        *ngFor="let product of paginatedProducts"
+        [theProduct]="product"
+      ></card>
+    </div>
+    <div class="pagination">
+      <button
+        type="button"
+        *ngFor="let page of Pages"
+        [ngClass]="{ clicked: clickedButton === page }"
+        (click)="changePage(page)"
+      >
+        {{ page }}
+      </button>
+    </div>
+  </div>
+</div>
