@@ -3,7 +3,7 @@ import { IbigProduct } from "../Models/IbigProduct";
 export class BigProductsData {
   static bigProducts: IbigProduct[] = [{
     category: "Custom",
-    imageUrl: "/assets/images/cardslider1.avif",
+    imageUrl: "assets/images/cardslider1.avif",
     name: "RDY Y40P 003",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i7-14700KF CPU",
@@ -16,7 +16,7 @@ export class BigProductsData {
     ID: 1
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider2.avif",
+    imageUrl: "assets/images/cardslider2.avif",
     name: "RDY Trace 7MP 009",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen 7 7700X CPU",
@@ -29,7 +29,7 @@ export class BigProductsData {
     ID: 2
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider3.avif",
+    imageUrl: "assets/images/cardslider3.avif",
     name: "Intel Core 11th Gen Extreme Gaming",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i9-14900KF CPU",
@@ -42,7 +42,7 @@ export class BigProductsData {
     ID: 3
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider4.avif",
+    imageUrl: "assets/images/cardslider4.avif",
     name: "AMD Gaming PC Configurator 2",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen™ 5 7600 CPU",
@@ -55,7 +55,7 @@ export class BigProductsData {
     ID: 4
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider5.avif",
+    imageUrl: "assets/images/cardslider5.avif",
     name: "RDY Slate 8MP 003",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i7-14700F CPU",
@@ -68,7 +68,7 @@ export class BigProductsData {
     ID: 5
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider6.avif",
+    imageUrl: "assets/images/cardslider6.avif",
     name: "RDY Y40 VALORANT VCTA R003",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen 7 7700X CPU",
@@ -81,7 +81,7 @@ export class BigProductsData {
     ID: 6
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider7.avif",
+    imageUrl: "assets/images/cardslider7.avif",
     name: "Intel Gaming PC Configurator 3",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i7-14700KF CPU",
@@ -94,7 +94,7 @@ export class BigProductsData {
     ID: 7
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/cardslider8.avif",
+    imageUrl: "assets/images/cardslider8.avif",
     name: "AMD Ryzen 9 Ultimate Gaming",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen™ 9 7950X3D CPU",
@@ -107,7 +107,7 @@ export class BigProductsData {
     ID: 8
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/prebuilt1.avif",
+    imageUrl: "assets/images/prebuilt1.avif",
     name: "Hive Tech Intel Core 14th Gen Daily Deal",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i9-14900KF",
@@ -120,7 +120,7 @@ export class BigProductsData {
     ID: 9
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/prebuilt2.avif",
+    imageUrl: "assets/images/prebuilt2.avif",
     name: "Hive Tech AMD Ryzen Daily Deal",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen™ 7 7700X",
@@ -133,7 +133,7 @@ export class BigProductsData {
     ID: 10
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/prebuilt3.avif",
+    imageUrl: "assets/images/prebuilt3.avif",
     name: "Hive Tech Lancool 005",
     windows: "Windows 11 Home",
     cpu: "Intel® Core™ i9-14900KF",
@@ -146,7 +146,7 @@ export class BigProductsData {
     ID: 11
   }, {
     category: "Custom",
-    imageUrl: "/assets/images/prebuilt4.avif",
+    imageUrl: "assets/images/prebuilt4.avif",
     name: "Hive Tech Trace 7MP 001",
     windows: "Windows 11 Home",
     cpu: "AMD Ryzen 7 7700X CPU",
