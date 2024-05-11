@@ -7,6 +7,8 @@ import { WhySectionComponent } from './why-section/why-section.component';
 import { smallSliderSlide } from '../../Directives/small-slider-slide.directive';
 import { BigSliderSlideDirective } from '../../Directives/big-slider-slide.directive';
 import { CardSliderSlideDirective } from '../../Directives/card-slider-slide.directive';
+import { LaptopCardSliderComponent } from '../laptops/laptop-card-slider/laptop-card-slider.component';
+import { LaptopCardSlideDirective } from '../../Directives/laptopCardSlide.directive';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +20,9 @@ import { CardSliderSlideDirective } from '../../Directives/card-slider-slide.dir
     WhySectionComponent,
     smallSliderSlide,
     BigSliderSlideDirective,
-    CardSliderSlideDirective
+    CardSliderSlideDirective,
+    LaptopCardSliderComponent,
+    LaptopCardSlideDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -23,7 +23,7 @@ export class CustomDetailsComponent implements OnInit {
   @ViewChild('numberofitems') select!: ElementRef;
 
   ngOnInit(): void {
-    this.product = BigProductsData.bigProducts.find((el) => el.ID === this.id)
+    this.product = history.state;
 
     if (this.product!.stock > 0) {
       for (let i = 1; i <= this.product!.stock; i++) {

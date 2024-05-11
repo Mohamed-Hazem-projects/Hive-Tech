@@ -1,6 +1,7 @@
 <div class="slider">
   <button
     type="button"
+    name="last slide"
     class="before"
     (click)="left()"
     [hidden]="slidesAppear[0]"
@@ -45,6 +46,7 @@
 
   <button
     type="button"
+    name="next slide"
     class="next"
     (click)="right()"
     [hidden]="slidesAppear[slidesAppear.length - 1]"

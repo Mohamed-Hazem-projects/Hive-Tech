@@ -1,5 +1,5 @@
 <div class="slider">
-  <button type="button" class="before" (click)="before()">
+  <button type="button" class="before" (click)="before()" name="last slide">
     <i class="fa-solid fa-angle-left"></i>
   </button>
 
@@ -56,7 +56,11 @@
     </div>
 
     <div>
-      <img src="assets/images/slider6.webp" alt="SliderImage" />
+      <img
+        src="assets/images/slider6.webp"
+        alt="SliderImage"
+        NgOptimizedImage
+      />
       <div class="writing">
         <h2>Dominate With The Best</h2>
         <p>Custom PCs with World-Class Hardware</p>
@@ -138,7 +142,7 @@
     </div>
   </div>
 
-  <button type="button" class="next" (click)="next()">
+  <button type="button" class="next" (click)="next()" name="next slide">
     <i class="fa-solid fa-angle-right"></i>
   </button>
   <div class="pagination">

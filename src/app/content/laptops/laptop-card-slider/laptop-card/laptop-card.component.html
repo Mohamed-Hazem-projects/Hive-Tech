@@ -3,7 +3,7 @@
     ><img [src]="theProduct.imageUrl" alt="Product Image"
   /></span>
   <div class="product-name">
-    <a routerLink="/laptops/laptop/{{ theProduct.ID }}">
+    <a routerLink="/laptops/laptop/{{ theProduct.ID }}" [state]="theProduct">
       <p>{{ theProduct.name }}</p>
     </a>
   </div>
