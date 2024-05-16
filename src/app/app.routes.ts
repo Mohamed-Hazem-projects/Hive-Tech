@@ -9,6 +9,7 @@ import { CustomPCComponent } from './content/custom-pc/custom-pc.component';
 import { CustomDetailsComponent } from './content/custom-pc/custom-details/custom-details.component';
 import { LaptopsComponent } from './content/laptops/laptops.component';
 import { LaptopDetailsComponent } from './content/laptops/laptop-details/laptop-details.component';
+import { SignInComponent } from './content/sign-in/sign-in.component';
 
 export const routes: Routes = [
   {
@@ -53,6 +54,9 @@ export const routes: Routes = [
   }, {
     path: 'laptops/laptop/:id',
     component: LaptopDetailsComponent
+  }, {
+    path: 'sign-in',
+    component: SignInComponent
   },
   {
     path: '**',

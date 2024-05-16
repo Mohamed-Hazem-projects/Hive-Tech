@@ -1,0 +1,203 @@
+$primary-color: #6ce3e3;
+$secondary-color: #333333;
+
+.main > .form > form > div > input.touched ~ label {
+  top: 0%;
+  transform: translateY(-10%);
+}
+
+input.ng-invalid.ng-touched.ng-dirty {
+  box-shadow: inset 0px 0px 3px 0px rgb(255 0 0 / 47%);
+}
+input.ng-invalid.ng-touched.ng-dirty ~ label::before {
+  content: "x";
+  color: red;
+  position: relative;
+  left: 290px;
+  font-size: 16px;
+  display: inline-block;
+  width: 0px;
+}
+
+.main {
+  color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 1250px) {
+    flex-direction: column;
+  }
+  padding: 80px;
+  @media (max-width: 500px) {
+    padding: 20px;
+  }
+  width: 100%;
+  > .form {
+    width: 50%;
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > h2 {
+      margin: 0 0 40px 0;
+      font-size: 45px;
+      @media (max-width: 615px) {
+        font-size: 30px;
+      }
+    }
+    form {
+      div {
+        position: relative;
+        input {
+          padding: 0px 5px;
+          margin: 10px 0px;
+          width: 330px;
+          height: 40px;
+          border-radius: 4px;
+          font-size: 1.2rem;
+          outline: none;
+          border: 1px solid #333333;
+        }
+        input:focus ~ label {
+          top: 0%;
+          transform: translateY(-10%);
+        }
+        label {
+          position: absolute;
+          left: 5px;
+          color: rgba(92, 91, 91, 0.656);
+          font-size: 13px;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 2px 2px;
+          background: white;
+          border-radius: 2px;
+          cursor: text;
+          transition: 0.2s;
+        }
+      }
+      > input {
+        margin-top: 25px;
+        width: 330px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: transparent;
+        border-radius: 30px;
+        padding: 7px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      > input:hover {
+        background-color: black;
+        color: white;
+      }
+      p {
+        text-align: center;
+        color: red;
+      }
+    }
+    > div {
+      position: relative;
+      > p {
+        margin: 20px 0px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px 14px;
+        position: relative;
+        background-color: white;
+        z-index: 5;
+      }
+      > span {
+        position: absolute;
+        height: 2px;
+        width: 330px;
+        background-color: #333333;
+        transform: translateX(-42.95%);
+        top: 37px;
+        z-index: 1;
+      }
+    }
+    a {
+      margin-bottom: 20px;
+    }
+    > a:visited {
+      color: #1694f5;
+    }
+  }
+  > .createacc {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+    padding-right: 8%;
+    @media (max-width: 1250px) {
+      padding: 100px;
+    }
+    @media (max-width: 800px) {
+      padding: 50px;
+    }
+    @media (max-width: 615px) {
+      padding: 20px;
+      align-items: center;
+    }
+    @media (max-width: 485px) {
+      padding: 5px;
+    }
+    > h2 {
+      margin: 0;
+      font-size: 2.05rem;
+      @media (max-width: 615px) {
+        font-size: 1.6rem;
+      }
+    }
+    > p {
+      font-size: 1.2rem;
+      @media (max-width: 615px) {
+        font-size: 0.875rem;
+        text-align: center;
+      }
+      margin-top: 0.5rem;
+    }
+    > .part {
+      display: flex;
+      img {
+        padding: 20px 20px 20px 0px;
+      }
+      h3 {
+        font-size: 1.6rem;
+        @media (max-width: 615px) {
+          font-size: 1.4rem;
+        }
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+      p {
+        line-height: 1.8rem;
+        font-size: 1.2rem;
+        margin: 9px 0px;
+        @media (max-width: 615px) {
+          font-size: 0.875rem;
+          line-height: 1.3rem;
+        }
+      }
+    }
+    > button {
+      margin-top: 25px;
+      width: 330px;
+      font-size: 1.3rem;
+      background-color: transparent;
+      border-radius: 30px;
+      padding: 7px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    > button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

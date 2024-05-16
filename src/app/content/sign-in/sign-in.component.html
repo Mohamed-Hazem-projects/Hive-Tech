@@ -1,0 +1,110 @@
+<div class="main">
+  <div class="form">
+    <h2>Sign In</h2>
+    <form action="" (ngSubmit)="onFormSubmit()" #theForm="ngForm">
+      <div class="email">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          ngModel
+          required
+          email
+          (change)="inputChange(1)"
+          [ngClass]="{ touched: emailTouched }"
+        />
+        <label for="email">Email</label>
+      </div>
+      <div class="password">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          ngModel
+          required
+          (change)="inputChange(2)"
+          [ngClass]="{ touched: passwordTouched }"
+        />
+        <label for="password">Password</label>
+      </div>
+      <input type="submit" value="Sign In" />
+
+      <div *ngIf="submitClicked">
+        <p *ngIf="!theForm.control.controls['email'].touched">
+          <i class="fa-solid fa-xmark"></i> Please enter your email
+        </p>
+        <p
+          *ngIf="
+            !theForm.control.controls['email'].valid &&
+            theForm.control.controls['email'].touched
+          "
+        >
+          <i class="fa-solid fa-xmark"></i> Please enter a correct email
+        </p>
+        <p *ngIf="!theForm.control.controls['password'].valid">
+          <i class="fa-solid fa-xmark"></i> Please enter your password
+        </p>
+      </div>
+    </form>
+    <div class="or">
+      <p>Or</p>
+      <span></span>
+    </div>
+    <a routerLink="/Home"
+      >Continue as Guest <i class="fa-solid fa-arrow-right"></i
+    ></a>
+  </div>
+  <div class="createacc">
+    <h2>New Customer?</h2>
+    <p>Create an account with us and you'll be able to:</p>
+    <div class="part">
+      <img src="assets/images/sign1.svg" alt="" />
+      <div class="writing">
+        <h3>Get Reward</h3>
+        <p>
+          You can receive reward points with every purchase which will be
+          discounted for cash in the next purchase.
+        </p>
+      </div>
+    </div>
+    <div class="part">
+      <img src="assets/images/sign2.svg" alt="" />
+      <div class="writing">
+        <h3>Access Order History</h3>
+        <p>
+          Check the details and status of your order history in your account.
+        </p>
+      </div>
+    </div>
+    <div class="part">
+      <img src="assets/images/sign3.svg" alt="" />
+      <div class="writing">
+        <h3>Track Order Status</h3>
+        <p>
+          Check the details and status of your orders and returns in your
+          account.
+        </p>
+      </div>
+    </div>
+    <div class="part">
+      <img src="assets/images/sign4.svg" alt="" />
+      <div class="writing">
+        <h3>Stay Informed</h3>
+        <p>
+          Receive our e-mail updates about new products, promotions and more.
+        </p>
+      </div>
+    </div>
+    <div class="part">
+      <img src="assets/images/sign5.svg" alt="" />
+      <div class="writing">
+        <h3>Faster, Easier Checkout</h3>
+        <p>
+          The system will remember the last checkout information and bring it in
+          automatically.
+        </p>
+      </div>
+    </div>
+    <button routerLink="/Register">Create Account</button>
+  </div>
+</div>
