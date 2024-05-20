@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { CanDeactivateUser } from '../../Models/canDeactivateUser';
+import { ConfirmExitComponent } from './confirm-exit/confirm-exit.component';
+import { ConfirmNavigationService } from '../../Services/confirmNavigation.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,41 +12,56 @@ import { RouterLink } from '@angular/router';
   imports: [
     RouterLink,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ConfirmExitComponent
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss'
 })
-export class SignInComponent {
+export class SignInComponent implements CanDeactivateUser {
 
   @ViewChild('theForm') form!: NgForm;
   userInfo: { email: string, password: string } = { email: '', password: '' }
 
-  emailTouched: boolean = false;
+  emailTouched: Boolean = false;
   passwordTouched: Boolean = false;
-  submitClicked: boolean = false;
+  submitClicked: Boolean = false;
+  confirmExitFlag: Boolean = true;
+  showConfirmation: Boolean = false;
 
   onFormSubmit() {
+    this.submitClicked = true;
+    this.confirmExitFlag = true;
     if (this.form.valid) {
-      this.submitClicked = true;
-      console.log(this.form)
-      console.log(this.userInfo.email)
-      console.log(this.userInfo.password)
-    } else {
-      this.submitClicked = true;
+      this.userInfo.email = this.form.value.email
+      this.userInfo.password = this.form.value.password
+
+      //console.log(this.userInfo)
     }
   }
 
   inputChange(num: number) {
-
+    this.confirmExitFlag = false;
     if (num === 1) {
-      this.userInfo.email = this.form.value.email
-      this.userInfo.email !== '' ? this.emailTouched = true : this.emailTouched = false
+      this.form.value.email !== '' ? this.emailTouched = true : this.emailTouched = false
     }
     else {
-      this.userInfo.password = this.form.value.password
-      this.userInfo.password !== '' ? this.passwordTouched = true : this.passwordTouched = false
+      this.form.value.password !== '' ? this.passwordTouched = true : this.passwordTouched = false
     }
-
   }
+
+  closePopUp(ev: Boolean) {
+    this.showConfirmation = ev;
+  }
+  confirmNav: ConfirmNavigationService = inject(ConfirmNavigationService)
+  confirmExit() {
+
+    if (this.confirmExitFlag === true) {
+      return true;
+    } else {
+      this.showConfirmation = true;
+      return this.confirmNav.confirmNavEvent
+    }
+  }
+
 }

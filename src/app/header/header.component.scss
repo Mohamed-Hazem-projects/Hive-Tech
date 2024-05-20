@@ -122,7 +122,7 @@ header ul a {
 .bars ul {
   position: absolute;
   height: auto;
-  width: 300px;
+  width: 175px;
   flex-direction: column;
   top: 65px;
   right: 0;
@@ -134,7 +134,7 @@ header ul a {
 }
 .bars ul li {
   width: 100%;
-  font-size: 32px;
+  font-size: 16px;
   background-color: white;
   border-bottom: 1px solid $secondary-color;
   position: relative;
@@ -144,10 +144,10 @@ header ul a {
   border-top: 2px solid #d8dcdf;
 }
 .bars ul li:first-of-type a {
-  padding: 25px 30px;
+  padding: 25px 25px;
 }
 .bars ul li a {
-  padding: 25px 50px;
+  padding: 25px 30px;
   user-select: none;
 }
 .overlay {
@@ -173,15 +173,15 @@ header ul a {
 @keyframes appearFromLeft {
   0% {
     width: 0;
-    letter-spacing: -15px;
-    word-spacing: -30px;
+    letter-spacing: -7px;
+    word-spacing: -15px;
   }
   50% {
-    letter-spacing: -10px;
-    word-spacing: -25px;
+    letter-spacing: -5px;
+    word-spacing: -15px;
   }
   100% {
-    width: 300px;
+    width: 175px;
     letter-spacing: 0;
     word-spacing: 0;
   }

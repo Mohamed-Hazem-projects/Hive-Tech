@@ -10,6 +10,7 @@ import { CustomDetailsComponent } from './content/custom-pc/custom-details/custo
 import { LaptopsComponent } from './content/laptops/laptops.component';
 import { LaptopDetailsComponent } from './content/laptops/laptop-details/laptop-details.component';
 import { SignInComponent } from './content/sign-in/sign-in.component';
+import { CanDeactivateUser } from './Models/canDeactivateUser';
 
 export const routes: Routes = [
   {
@@ -56,6 +57,9 @@ export const routes: Routes = [
     component: LaptopDetailsComponent
   }, {
     path: 'sign-in',
+    canDeactivate: [(form: CanDeactivateUser) => {
+      return form.confirmExit()
+    }],
     component: SignInComponent
   },
   {

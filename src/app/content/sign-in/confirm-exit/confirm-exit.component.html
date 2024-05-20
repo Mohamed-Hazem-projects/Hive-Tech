@@ -1,0 +1,18 @@
+<div class="overlay" (click)="sendConfirmExit($event, 2)">
+  <div class="main" (click)="stopProp($event)">
+    <div class="header">
+      <h3>Confirm Navigation</h3>
+      <button (click)="sendConfirmExit($event, 2)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="writing">
+      <p>You have unsaved changes.</p>
+      <p>Are you sure you want to leave this page?</p>
+    </div>
+    <div class="buttons">
+      <button (click)="sendConfirmExit($event, 1)">Leave this Page</button>
+      <button (click)="sendConfirmExit($event, 2)">Stay on this Page</button>
+    </div>
+  </div>
+</div>

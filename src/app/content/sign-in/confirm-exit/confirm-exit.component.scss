@@ -1,0 +1,70 @@
+$primary-color: #6ce3e3;
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #3333338c;
+  top: 66px;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    position: relative;
+    top: -66px;
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(168, 167, 167);
+      > h3 {
+        margin: 13px 15px;
+      }
+      > button {
+        border: none;
+        background-color: transparent;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: color 0.15s;
+      }
+      > button:hover {
+        color: $primary-color;
+      }
+    }
+    > .writing {
+      height: 100px;
+      padding-top: 10px;
+    }
+    > .writing p {
+      margin: 0;
+      padding: 3px 10px;
+    }
+    > .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+    }
+    > .buttons button:first-of-type {
+      background-color: hsl(207, 88%, 60%);
+      color: white;
+    }
+    > .buttons button:first-of-type:hover {
+      background-color: hsl(207, 86%, 50%);
+    }
+    > .buttons button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+  }
+}
