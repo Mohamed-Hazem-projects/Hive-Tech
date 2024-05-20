@@ -11,6 +11,7 @@
           required
           email
           (change)="inputChange(1)"
+          #email="ngModel"
           [ngClass]="{ touched: emailTouched }"
         />
         <label for="email">Email</label>
@@ -30,15 +31,10 @@
       <input type="submit" value="Sign In" />
 
       <div *ngIf="submitClicked">
-        <p *ngIf="!theForm.control.controls['email'].touched">
+        <p *ngIf="!email.touched">
           <i class="fa-solid fa-xmark"></i> Please enter your email
         </p>
-        <p
-          *ngIf="
-            !theForm.control.controls['email'].valid &&
-            theForm.control.controls['email'].touched
-          "
-        >
+        <p *ngIf="!email.valid && email.touched">
           <i class="fa-solid fa-xmark"></i> Please enter a correct email
         </p>
         <p *ngIf="!theForm.control.controls['password'].valid">
@@ -108,3 +104,7 @@
     <button routerLink="/Register">Create Account</button>
   </div>
 </div>
+<confirm-exit
+  *ngIf="showConfirmation"
+  (closePopup)="closePopUp($event)"
+></confirm-exit>

@@ -191,6 +191,9 @@ i {
       transition: background-color 0.3s;
       padding: 5px 10px;
       font-size: 20px;
+      @media (max-width: 420px) {
+        font-size: 14px;
+      }
       margin-top: 23px;
     }
     button:hover {
@@ -198,6 +201,9 @@ i {
     }
     span {
       font-size: 30px;
+      @media (max-width: 420px) {
+        font-size: 22px;
+      }
     }
   }
 }

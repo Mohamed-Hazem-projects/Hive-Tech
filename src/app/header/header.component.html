@@ -31,16 +31,36 @@
 <ng-template #routes
   ><ul>
     <li>
-      <a routerLink="/custom-pc" routerLinkActive="route-active">Custom PCs</a>
+      <a
+        routerLink="/custom-pc"
+        routerLinkActive="route-active"
+        (click)="closeBars()"
+        >Custom PCs</a
+      >
     </li>
     <li>
-      <a routerLink="/products" routerLinkActive="route-active">PC parts</a>
+      <a
+        routerLink="/products"
+        routerLinkActive="route-active"
+        (click)="closeBars()"
+        >PC parts</a
+      >
     </li>
     <li>
-      <a routerLink="/laptops" routerLinkActive="route-active">Laptops</a>
+      <a
+        routerLink="/laptops"
+        routerLinkActive="route-active"
+        (click)="closeBars()"
+        >Laptops</a
+      >
     </li>
     <li>
-      <a routerLink="/gear-store" routerLinkActive="route-active">Gear Store</a>
+      <a
+        routerLink="/gear-store"
+        routerLinkActive="route-active"
+        (click)="closeBars()"
+        >Gear Store</a
+      >
     </li>
   </ul></ng-template
 >
