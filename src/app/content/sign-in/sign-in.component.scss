@@ -50,7 +50,7 @@ input.ng-invalid.ng-touched.ng-dirty ~ label::before {
       div {
         position: relative;
         input {
-          padding: 0px 5px;
+          padding: 0px 8px;
           margin: 10px 0px;
           width: 330px;
           height: 40px;
@@ -89,7 +89,7 @@ input.ng-invalid.ng-touched.ng-dirty ~ label::before {
         transition: background-color 0.3s, color 0.3s;
       }
       > input:hover {
-        background-color: black;
+        background-color: $secondary-color;
         color: white;
       }
       p {
@@ -196,7 +196,7 @@ input.ng-invalid.ng-touched.ng-dirty ~ label::before {
       transition: background-color 0.3s, color 0.3s;
     }
     > button:hover {
-      background-color: black;
+      background-color: $secondary-color;
       color: white;
     }
   }
