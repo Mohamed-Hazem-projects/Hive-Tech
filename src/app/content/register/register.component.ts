@@ -93,6 +93,7 @@ export class RegisterComponent implements OnInit, CanDeactivateUser {
     newsletter: Boolean
   }
   formSubmitFlag: Boolean = false;
+  accountCreated: Boolean = false;
   formSubmitted() {
     if (this.form.invalid) {
       this.formSubmitFlag = true;
@@ -101,9 +102,21 @@ export class RegisterComponent implements OnInit, CanDeactivateUser {
       this.user = this.form.value;
       //console.log(this.user)
       //http stuff
+      this.reset()
+      this.accountCreated = true;
     }
   }
-
+  reset() {
+    this.form.reset({
+      firstname: null,
+      lastname: null,
+      email: null,
+      phoneNo: null,
+      password: '',
+      confirmPW: '',
+      newsletter: false
+    })
+  }
   showConfirmation: Boolean = false;
   closePopUp(ev: Boolean) {
     //this is to close the confirmation after user picks an option

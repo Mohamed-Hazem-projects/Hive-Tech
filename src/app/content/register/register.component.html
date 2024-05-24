@@ -168,6 +168,9 @@
         <label for="subscribe">Subscribe to Hive Tech Newsletter</label>
       </div>
       <input type="submit" value="Create Account" />
+      <h4 class="created" *ngIf="accountCreated">
+        Your account has been created!
+      </h4>
       <p class="go-to-signin">
         Have an account? <a routerLink="/sign-in">Sign In</a>
       </p>
