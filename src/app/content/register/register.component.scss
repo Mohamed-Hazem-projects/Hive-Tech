@@ -133,6 +133,16 @@ input.ng-invalid.ng-touched.ng-dirty ~ label::before {
           color: #2ecc4e;
         }
       }
+      > .created {
+        text-align: center;
+        font-size: 19px;
+        color: #2ecc4e;
+        border-radius: 50px;
+        border: 1px solid #2ecc4e;
+        padding: 5px 11px;
+        margin: 16px 0px;
+        box-shadow: inset 0px 0px 5px -1px #2ecc4e;
+      }
       > input {
         margin-top: 25px;
         width: 330px;
