@@ -1,0 +1,180 @@
+<div class="main">
+  <div class="form">
+    <h2>Create Account</h2>
+    <form action="" [formGroup]="form" (ngSubmit)="formSubmitted()">
+      <div class="fname">
+        <input
+          type="text"
+          id="fname"
+          formControlName="firstname"
+          (change)="inputChanged(0)"
+          [ngClass]="{ touched: inputChangeFlags[0] }"
+        />
+        <label for="fname">First Name</label>
+      </div>
+      <small *ngIf="form.get('firstname')?.invalid && formSubmitFlag"
+        >*First Name is required.</small
+      >
+      <div class="lname">
+        <input
+          type="text"
+          id="lname"
+          formControlName="lastname"
+          (change)="inputChanged(1)"
+          [ngClass]="{ touched: inputChangeFlags[1] }"
+        />
+        <label for="lname">Last Name</label>
+      </div>
+      <small *ngIf="form.get('lastname')?.invalid && formSubmitFlag"
+        >*Last Name is required.</small
+      >
+      <div class="email">
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          (change)="inputChanged(2)"
+          [ngClass]="{ touched: inputChangeFlags[2] }"
+        />
+        <label for="email">Email Address</label>
+      </div>
+      <small *ngIf="form.get('email')?.invalid && formSubmitFlag"
+        >*A correct e-mail is required. (ex:mo12&#64;gmail.com)</small
+      >
+      <div class="phoneNo">
+        <input
+          type="text"
+          name="phoneNo"
+          id="phoneNo"
+          formControlName="phoneNo"
+          (change)="inputChanged(3)"
+          [ngClass]="{ touched: inputChangeFlags[3] }"
+        />
+        <label for="phoneNo">Phone Number (Optional)</label>
+      </div>
+      <div class="password">
+        <input
+          [type]="showPassword ? 'tex' : 'password'"
+          id="password"
+          formControlName="password"
+          (change)="inputChanged(4)"
+          [ngClass]="{ touched: inputChangeFlags[4] }"
+        />
+        <label for="password">Password</label>
+        <i
+          *ngIf="showPassword"
+          (click)="showPassword = !showPassword"
+          class="fa-regular fa-eye"
+        ></i>
+        <i
+          *ngIf="!showPassword"
+          (click)="showPassword = !showPassword"
+          class="fa-regular fa-eye-slash"
+        ></i>
+      </div>
+      <div class="password-rules">
+        <h4>Password must contain:</h4>
+        <div>
+          <i
+            *ngIf="form.get('password')?.errors?.['pwMinLength']"
+            class="fa-solid fa-x"
+          ></i
+          ><i
+            *ngIf="!form.get('password')?.errors?.['pwMinLength']"
+            [ngClass]="{greenify: !form.get('password')?.errors?.['pwMinLength']}"
+            class="fa-solid fa-check"
+          ></i>
+          <p
+            [ngClass]="{greenify: !form.get('password')?.errors?.['pwMinLength']}"
+          >
+            Minimum 8 characters
+          </p>
+        </div>
+        <div>
+          <i
+            *ngIf="form.get('password')?.errors?.['lowerUpper']"
+            class="fa-solid fa-x"
+          ></i
+          ><i
+            *ngIf="!form.get('password')?.errors?.['lowerUpper']"
+            [ngClass]="{greenify: !form.get('password')?.errors?.['lowerUpper']}"
+            class="fa-solid fa-check"
+          ></i>
+          <p
+            [ngClass]="{greenify: !form.get('password')?.errors?.['lowerUpper']}"
+          >
+            At least 1 lower case and 1 upper case character.
+          </p>
+        </div>
+        <div>
+          <i
+            *ngIf="form.get('password')?.errors?.['numbermin']"
+            class="fa-solid fa-x"
+          ></i
+          ><i
+            *ngIf="!form.get('password')?.errors?.['numbermin']"
+            [ngClass]="{greenify: !form.get('password')?.errors?.['numbermin']}"
+            class="fa-solid fa-check"
+          ></i>
+          <p
+            [ngClass]="{greenify: !form.get('password')?.errors?.['numbermin']}"
+          >
+            At least 1 number
+          </p>
+        </div>
+        <div>
+          <i
+            *ngIf="form.get('password')?.errors?.['specialChar']"
+            class="fa-solid fa-x"
+          ></i
+          ><i
+            *ngIf="!form.get('password')?.errors?.['specialChar']"
+            [ngClass]="{greenify: !form.get('password')?.errors?.['specialChar']}"
+            class="fa-solid fa-check"
+          ></i>
+          <p
+            [ngClass]="{greenify: !form.get('password')?.errors?.['specialChar']}"
+          >
+            At least 1 special character from - + _ ! &#64; # $ % ^ & * . , ? (
+            ) (other special characters are not supported)
+          </p>
+        </div>
+      </div>
+      <div class="confirmP">
+        <input
+          [type]="showPasswordConfirm ? 'text' : 'password'"
+          id="confirmP"
+          formControlName="confirmPW"
+          (change)="inputChanged(5)"
+          [ngClass]="{ touched: inputChangeFlags[5] }"
+        />
+        <label for="confirmP">Re-enter Password</label>
+        <i
+          *ngIf="showPasswordConfirm"
+          (click)="showPasswordConfirm = !showPasswordConfirm"
+          class="fa-regular fa-eye"
+        ></i>
+        <i
+          *ngIf="!showPasswordConfirm"
+          (click)="showPasswordConfirm = !showPasswordConfirm"
+          class="fa-regular fa-eye-slash"
+        ></i>
+      </div>
+      <small *ngIf="form.errors?.['confirmPW'] && formSubmitFlag"
+        >*Not equal to your password.</small
+      >
+      <div class="checks">
+        <input type="checkbox" value="subscribe" formControlName="newsletter" />
+        <label for="subscribe">Subscribe to Hive Tech Newsletter</label>
+      </div>
+      <input type="submit" value="Create Account" />
+      <p class="go-to-signin">
+        Have an account? <a routerLink="/sign-in">Sign In</a>
+      </p>
+    </form>
+  </div>
+</div>
+<confirm-exit
+  *ngIf="showConfirmation"
+  (closePopup)="closePopUp($event)"
+></confirm-exit>

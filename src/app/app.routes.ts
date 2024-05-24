@@ -1,15 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './content/home/home.component';
-import { ProductsComponent } from './content/products/products.component';
-import { GearStoreComponent } from './content/gear-store/gear-store.component';
 import { NotFoundComponent } from './content/not-found/not-found.component';
-import { GearDetailsComponent } from './content/gear-store/gear-details/gear-details.component';
-import { ProductDetailsComponent } from './content/products/product-details/product-details.component';
-import { CustomPCComponent } from './content/custom-pc/custom-pc.component';
-import { CustomDetailsComponent } from './content/custom-pc/custom-details/custom-details.component';
-import { LaptopsComponent } from './content/laptops/laptops.component';
-import { LaptopDetailsComponent } from './content/laptops/laptop-details/laptop-details.component';
-import { SignInComponent } from './content/sign-in/sign-in.component';
 import { CanDeactivateUser } from './Models/canDeactivateUser';
 
 export const routes: Routes = [
@@ -29,38 +20,54 @@ export const routes: Routes = [
   },
   {
     path: 'products/category/:id',
-    component: ProductsComponent
+    loadComponent: () => import('./content/products/products.component')
+      .then(r => r.ProductsComponent)
   },
   {
     path: 'products/product/:id',
-    component: ProductDetailsComponent
+    loadComponent: () => import('./content/products/product-details/product-details.component')
+      .then(r => r.ProductDetailsComponent)
   },
   {
     path: 'gear-store',
-    component: GearStoreComponent
+    loadComponent: () => import('./content/gear-store/gear-store.component')
+      .then(r => r.GearStoreComponent)
   },
   {
     path: 'gear-store/product/:id',
-    component: GearDetailsComponent
+    loadComponent: () => import('./content/gear-store/gear-details/gear-details.component')
+      .then(r => r.GearDetailsComponent)
   }, {
     path: 'custom-pc',
-    component: CustomPCComponent
+    loadComponent: () => import('./content/custom-pc/custom-pc.component')
+      .then(r => r.CustomPCComponent)
   },
   {
     path: 'custom-pc/pc/:id',
-    component: CustomDetailsComponent
+    loadComponent: () => import('./content/custom-pc/custom-details/custom-details.component')
+      .then(r => r.CustomDetailsComponent)
   }, {
     path: 'laptops',
-    component: LaptopsComponent
+    loadComponent: () => import('./content/laptops/laptops.component')
+      .then(r => r.LaptopsComponent)
   }, {
     path: 'laptops/laptop/:id',
-    component: LaptopDetailsComponent
+    loadComponent: () => import('./content/laptops/laptop-details/laptop-details.component')
+      .then(r => r.LaptopDetailsComponent)
   }, {
     path: 'sign-in',
     canDeactivate: [(form: CanDeactivateUser) => {
       return form.confirmExit()
     }],
-    component: SignInComponent
+    loadComponent: () => import('./content/sign-in/sign-in.component')
+      .then(r => r.SignInComponent)
+  }, {
+    path: 'Register',
+    loadComponent: () => import('./content/register/register.component')
+      .then(r => r.RegisterComponent),
+    canDeactivate: [(form: CanDeactivateUser) => {
+      return form.confirmExit()
+    }]
   },
   {
     path: '**',
